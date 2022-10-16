@@ -48,7 +48,7 @@ public class Handler implements Runnable {
                         os.writeUTF("File " + fileName + " created");
                         for (int i = 0; i < (size + SIZE - 1) / SIZE; i++) {
                             int read = is.read(buf);
-                            fos.write(buf, 0 , read);
+                            fos.write(buf, 0, read);
                             os.writeUTF("Uploaded " + (i + 1) + " batch");
                         }
                     }
