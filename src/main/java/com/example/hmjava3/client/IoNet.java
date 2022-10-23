@@ -15,8 +15,7 @@ public class IoNet implements Closeable {
     private final DataOutputStream os;
     private final byte[] buf;
 
-    public IoNet(Callback callback,
-                 Socket socket) throws IOException {
+    public IoNet(Callback callback, Socket socket) throws IOException {
         this.callback = callback;
         this.socket = socket;
         is = new DataInputStream(socket.getInputStream());
